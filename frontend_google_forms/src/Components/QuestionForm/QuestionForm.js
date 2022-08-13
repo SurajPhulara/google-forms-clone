@@ -40,7 +40,7 @@ const QuestionForm = () => {
     },[form_id])
 
     async function abc(){
-        axios.get(`http://localhost:9000/getform/${form_id}`)
+        axios.get(`https://googleformsclone.herokuapp.com/getform/${form_id}`)
         .then(response =>{
             // console.log("loaded form : ",response.data)
             if(response.data) {

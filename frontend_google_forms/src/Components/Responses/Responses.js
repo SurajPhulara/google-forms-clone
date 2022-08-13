@@ -17,7 +17,7 @@ const Responses = () => {
     const [state, setState] = useState({responses:[]});
 
     async function abc(){
-        axios.get(`http://localhost:9000/getAllResponses/${form_id}`)
+        axios.get(`https://googleformsclone.herokuapp.com/getAllResponses/${form_id}`)
         .then(response =>{
             // console.log("loaded form : ",response.data)
             if(response.data) {

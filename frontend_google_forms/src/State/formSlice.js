@@ -40,12 +40,12 @@ export const formSlice = createSlice({
       else { }
     },
     save_form: (state, action) => {
-      console.log("save is called")
-      axios.post(`http://localhost:9000/saveform/${action.payload}`, { ...state })
+      // console.log("save is called")
+      axios.post(`https://googleformsclone.herokuapp.com/saveform/${action.payload}`, { ...state })
     },
     save_form2: (state, action) => {
-      console.log("save 2 is called")
-      axios.post(`http://localhost:9000/saveform/${action.payload}`, { ...initialState })
+      // console.log("save 2 is called")
+      axios.post(`https://googleformsclone.herokuapp.com/saveform/${action.payload}`, { ...initialState })
     },
     change_form_title: (state, action) => {
       state.form_title = action.payload;

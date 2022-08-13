@@ -16,7 +16,7 @@ const MainBody = () => {
   const [state, setState] = useState()
 
   useEffect(function load_form_data() {
-    axios.get("http://localhost:9000/getallforms")
+    axios.get("https://googleformsclone.herokuapp.com/getallforms")
       .then(response => {
         setState(response.data)
       })

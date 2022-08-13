@@ -14,7 +14,7 @@ const ViewForm = () => {
     const navigate = useNavigate()
 
     async function show_form() {
-        axios.get(`http://localhost:9000/getform/${form_id}`)
+        axios.get(`https://googleformsclone.herokuapp.com/getform/${form_id}`)
             .then(response => {
                 // console.log("loaded form : ", {...response.data.questions_array})
                 if (response.data) {
@@ -55,7 +55,7 @@ const ViewForm = () => {
 
     async function submit_form() {
         // console.log("called")
-        axios.post(`http://localhost:9000/saveresponse/${form_id}`, { ...answer })
+        axios.post(`https://googleformsclone.herokuapp.com/saveresponse/${form_id}`, { ...answer })
             .then(navigate(`/form/${form_id}/formResponse`, { state: { a: state.form_title } }))
     }
 
