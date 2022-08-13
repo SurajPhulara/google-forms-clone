@@ -46,9 +46,6 @@ const QuestionForm = () => {
             if(response.data) {
                 dispatch(load_form(response.data))
             }
-            else{
-                // dispatch(save_form2(form_id))
-            }
         })
     }
 
