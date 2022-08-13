@@ -1,0 +1,34 @@
+.FormHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px 0px 4px;
+    background-color: white;
+    box-sizing: content-box;
+}
+
+.headerLeft{
+    flex-wrap: wrap;
+}
+
+.headerLeft__formTitle{
+    padding: 0 20px;
+    font-size: large;
+    border: none;
+    background: none;
+    outline-width: 0;
+}
+
+/* .formHeader__sendButton{
+    margin: 0 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 15px;
+    font-size: 0.9rem;
+} */
+
+.formHeaderRight{
+    display: flex;
+    align-items: center;
+}
+

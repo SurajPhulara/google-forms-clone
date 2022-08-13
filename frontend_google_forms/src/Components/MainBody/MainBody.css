@@ -1,0 +1,101 @@
+.mainBody{
+    /* margin: 15px 12vw 0 10vw; */
+    width: 1110px;
+    margin: 15px auto;
+    /* border: 1px solid red; */
+}
+
+.mainBody__top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.mainBody__topLeft{
+    display: flex;
+    flex: 0.9;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.mainBody__topLeft__end{
+    font-weight: 400;
+    display: flex;
+}
+
+.mainBody__content{
+    display: flex;
+    /* overflow: auto; */
+    flex-flow: row wrap;
+    column-gap: 10px;
+    /* justify-content: space-between; */
+    /* width: 70vw; */
+    /* border: 1px solid red; */
+}
+
+.mainBody__card{
+    width: fit-content;
+    border: 1px solid rgb(218,220,224);
+    border-radius: 3px;
+    /* margin-right: 20px; */
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.mainBody__card:hover{
+    border: 1px solid #8430ce;
+}
+
+.mainBody__cardImage{
+    width: 206px;
+    border-radius: 3px 3px 0 0;
+    margin-bottom: 8px;
+    padding: 1px;
+    padding-bottom: 14px;
+    background-color: rgb(251,251,251);
+    border-bottom: 1px solid rgb(218,220,224);
+}
+
+.gforms_logo--small{
+    width: 18px;
+    height: 18px;
+    border-radius: 2px;
+}
+
+.mainBody__cardContent{
+    font-size: small;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mainBody__card__timestamp{
+    flex: 1;
+    padding: 0 4%;
+    color: rgb(115, 119, 121);
+}
+
+.mainBody__cardTitle,
+.mainBody__cardContent{
+    padding: 0 0 0 9%;
+}
+
+@media screen and (max-width: 1380px) {
+    .mainBody{
+        width: 915px;
+    }
+}
+@media screen and (max-width: 1086px) {
+    .mainBody{
+        width: 725px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .mainBody{
+        
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+}

@@ -1,0 +1,45 @@
+.drawer__items{
+    width: 275px;
+    margin: 0 10px 0 0;
+}
+
+.drawer__items>.drawer__list{
+    padding-top: 0;
+}
+
+.drawer__googleLogo {
+    width: 5rem;
+}
+
+.drawer__listImage{
+    width: 20px;
+}
+
+.drawer__listImage_docs{
+    width: 25px;
+    margin-left: -2.5px;
+    margin-right: -3px;
+}
+
+.drawer__listText{
+    margin-left: 20px;
+    color: rgb(67, 65, 65);
+    font-weight: 600;
+    /* font-size ; */
+}
+
+.drawer__servicesList{
+    margin-top: 15px;
+    color: rgb(117,117,117);
+}
+
+.drawer__servicesList:hover{
+    background-color: rgb(241,243,244);
+    border-radius: 0 50px 50px 0;
+    
+}
+
+.drawer__dividerTwo{
+    padding-top: 15px;
+    /* margin-bottom: 15px; */
+}
