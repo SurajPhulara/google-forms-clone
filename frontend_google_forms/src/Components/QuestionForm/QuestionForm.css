@@ -216,7 +216,7 @@ input{
         height: 55px;
         top: calc(100vh - 60px);
         left: 15px;
-        /* width: auto; */
+        width: auto;
         justify-content: space-around;
         right: 15px;
         border-radius: 8px 8px 0 0;
