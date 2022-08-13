@@ -214,7 +214,7 @@ input{
         /* background-color: red; */
         position: fixed;
         height: 55px;
-        top: calc(100vh - 60px);
+        top: calc(100vh - 70px);
         left: 15px;
         width: auto;
         justify-content: space-around;
