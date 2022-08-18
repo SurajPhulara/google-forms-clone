@@ -54,7 +54,7 @@ const FormHeader = () => {
         //     onClose();
         //   };
           function copy(){
-            navigator.clipboard.writeText(`http://localhost:3000/form/${form_id}/viewform`)
+            navigator.clipboard.writeText(`https://googleformsclone.netlify.app/form/${form_id}/viewform`)
           }
           return (
             <Dialog open={open}>
@@ -63,7 +63,7 @@ const FormHeader = () => {
                 {/* {emails.map((email) => ( */}
                   <ListItem button onClick={() =>(console.log("pp"))}>
                     <ListItemAvatar>
-                        {`http://localhost:3000/form/${form_id}/viewform`}
+                        {`https://googleformsclone.netlify.app/form/${form_id}/viewform`}
                     </ListItemAvatar>
                     <ListItemText />
                   </ListItem>
