@@ -37,7 +37,7 @@ const QuestionForm = () => {
     // const didMount = useRef(0);
     useEffect(()=>{
         dispatch(new_form_create("blank"))
-    },[form_id])
+    },[form_id, dispatch])
 
     // async function abc(){
     //     axios.get(`https://googleformsclone.herokuapp.com/getform/${form_id}`)
@@ -57,7 +57,7 @@ const QuestionForm = () => {
                 dispatch(load_form(response.data))
             }
         })
-    },[form_id])
+    },[form_id, dispatch])
 
     // useEffect(()=>{
     //     if(didMount.current > 1)
