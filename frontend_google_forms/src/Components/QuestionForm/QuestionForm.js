@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import "./QuestionForm.css"
 import { Divider, Tooltip, Typography } from '@mui/material';
 import Accordion from '@mui/material/Accordion';
@@ -25,7 +25,7 @@ import ViewAgendaOutlinedIcon from '@mui/icons-material/ViewAgendaOutlined';
 import { DragDropContext, Draggable, Droppable } from 'react-beautiful-dnd'
 import DragIndicatorIcon from '@mui/icons-material/DragIndicator';
 import { useSelector, useDispatch } from 'react-redux'
-import { save_form2, new_form_create, load_form, save_form, change_form_desc, change_form_title, toggle_expanded, change_question_text, add_option, change_question_type, change_option_text, duplicate_question, delete_question, toggle_required, delete_option, add_question, handle_drag_drop, } from '../../State/formSlice';
+import {new_form_create, load_form, save_form, change_form_desc, change_form_title, toggle_expanded, change_question_text, add_option, change_question_type, change_option_text, duplicate_question, delete_question, toggle_required, delete_option, add_question, handle_drag_drop, } from '../../State/formSlice';
 import { Button } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -34,12 +34,22 @@ const QuestionForm = () => {
     const { form_id } = useParams();
     const questions_state = useSelector((state) => state.form);
     const dispatch = useDispatch()
-    const didMount = useRef(0);
+    // const didMount = useRef(0);
     useEffect(()=>{
         dispatch(new_form_create("blank"))
     },[form_id])
 
-    async function abc(){
+    // async function abc(){
+    //     axios.get(`https://googleformsclone.herokuapp.com/getform/${form_id}`)
+    //     .then(response =>{
+    //         // console.log("loaded form : ",response.data)
+    //         if(response.data) {
+    //             dispatch(load_form(response.data))
+    //         }
+    //     })
+    // }
+
+    useEffect(()=>{
         axios.get(`https://googleformsclone.herokuapp.com/getform/${form_id}`)
         .then(response =>{
             // console.log("loaded form : ",response.data)
@@ -47,10 +57,6 @@ const QuestionForm = () => {
                 dispatch(load_form(response.data))
             }
         })
-    }
-
-    useEffect(()=>{
-        abc()
     },[form_id])
 
     // useEffect(()=>{

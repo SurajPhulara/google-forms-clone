@@ -13,17 +13,17 @@ const FormTabs = () => {
     <div>
       <Paper sx={{ mt: '0', flex: 1, boxShadow: "none", borderBottom: '1px solid rgb(218,220,224)' }} >
         <Tabs value={state} centered textColor="primary">
-          <Tab value={"1"} onClick={e => setState("1")} sx={{ fontWeight: "600", color: "#5f6368", fontSize: 13, textTransform: 'none', fontWeight: '100', }} label="Questions">
+          <Tab value={"1"} onClick={e => setState("1")} sx={{ color: "#5f6368", fontSize: 13, textTransform: 'none', fontWeight: '100', }} label="Questions">
 
           </Tab>
-          <Tab value={"2"} onClick={e => setState("2")} sx={{ fontWeight: "600", color: "#5f6368", fontSize: 13, textTransform: 'none', fontWeight: '100', }} label="Responses">
+          <Tab value={"2"} onClick={e => setState("2")} sx={{ color: "#5f6368", fontSize: 13, textTransform: 'none', fontWeight: '100', }} label="Responses">
           </Tab>
-          <Tab value={"3"} sx={{ fontWeight: "600", color: "#5f6368", fontSize: 13, textTransform: 'none', fontWeight: '100', }} label="Settings">
+          <Tab value={"3"} sx={{ color: "#5f6368", fontSize: 13, textTransform: 'none', fontWeight: '100', }} label="Settings">
 
           </Tab>
         </Tabs>
       </Paper>
-      {(state == "1") ? (
+      {(state === "1") ? (
         <div className="newForm__body">
           <QuestionForm />
         </div>

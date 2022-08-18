@@ -7,7 +7,6 @@ import NewForm from './Components/NewForm/NewForm'
 import ViewForm from './Components/ViewForm/ViewForm'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Submitted from './Components/Submitted/Submitted'
-import { render } from 'react-dom'
 
 const App = () => {
   return (

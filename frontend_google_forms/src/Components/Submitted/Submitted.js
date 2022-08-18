@@ -1,14 +1,14 @@
 import React from 'react'
 import "./Submitted.css"
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 const Submitted = () => {
     const location = useLocation();
     // console.log("helloooooooooo       :   ",location.state.a)
     const { form_id } = useParams({});
     // console.log(form_id)
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     return (
         <div>
             <div className="questionFormContainer" style={{ backgroundColor: 'rgb(240,235,248)', height: 'auto', minHeight: '100vh' }}>

@@ -59,7 +59,7 @@ export const formSlice = createSlice({
     },
     toggle_expanded: (state, action) => {
       // console.log(action)
-      state.questions_array.map((q, i) => {
+      state.questions_array.foreach((q, i) => {
         state.questions_array[i].open = false
       })
       state.questions_array[action.payload].open = true;

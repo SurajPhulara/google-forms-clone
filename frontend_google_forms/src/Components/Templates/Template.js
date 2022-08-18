@@ -11,7 +11,7 @@ import event_registration from "../../Assets/event_registration.png"
 import rsvp from "../../Assets/rsvp.png"
 import uuid from "react-uuid"
 import { useNavigate } from "react-router-dom"
-import { Divider } from '@mui/material';
+// import { Divider } from '@mui/material';
 
 const Template = () => {
 

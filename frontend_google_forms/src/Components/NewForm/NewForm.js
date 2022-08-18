@@ -1,7 +1,7 @@
 import React from 'react'
 import FormHeader from '../FormHeader/FormHeader'
 import FormTabs from '../FormTabs/FormTabs'
-import QuestionForm from '../QuestionForm/QuestionForm'
+// import QuestionForm from '../QuestionForm/QuestionForm'
 import "./NewForm.css"
 
 const NewForm = () => {

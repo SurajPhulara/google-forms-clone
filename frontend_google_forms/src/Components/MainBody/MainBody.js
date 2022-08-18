@@ -14,6 +14,10 @@ import { useNavigate } from 'react-router-dom';
 const MainBody = () => {
 
   const [state, setState] = useState()
+  const abc = () => console.log("asdfgh")
+  useEffect(()=>{
+    abc()
+  })
 
   useEffect(function load_form_data() {
     axios.get("https://googleformsclone.herokuapp.com/getallforms")

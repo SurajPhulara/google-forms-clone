@@ -11,7 +11,8 @@ import { Button } from '@mui/material';
 import "./FormHeader.css"
 import { useSelector, useDispatch } from 'react-redux'
 import {change_form_title } from '../../State/formSlice';
-import { useNavigate, useParams } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { Tooltip } from '@mui/material';
 import PropTypes from 'prop-types';
 
@@ -21,10 +22,10 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Dialog from '@mui/material/Dialog';
-import PersonIcon from '@mui/icons-material/Person';
-import AddIcon from '@mui/icons-material/Add';
-import Typography from '@mui/material/Typography';
-import { blue } from '@mui/material/colors';
+// import PersonIcon from '@mui/icons-material/Person';
+// import AddIcon from '@mui/icons-material/Add';
+// import Typography from '@mui/material/Typography';
+// import { blue } from '@mui/material/colors';
 
 
 
@@ -34,7 +35,7 @@ const FormHeader = () => {
 
     const questions_state = useSelector((state) => state.form);
     const dispatch = useDispatch()
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
     const [open,setOpen] = useState(false);
 
