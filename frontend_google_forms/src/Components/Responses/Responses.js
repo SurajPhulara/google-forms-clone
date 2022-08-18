@@ -2,21 +2,23 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
-const DownloadButton = props => {
-    const downloadFile = () => {
-      window.location.href = "https://yoursite.com/src/assets/files/exampleDoc.pdf"
-    }
-    return (
-              <button onClick={e => console.log(this.state)}>button download</button>
-    )
-  }
-
 const Responses = () => {
     const { form_id } = useParams();
 
     const [state, setState] = useState({responses:[]});
 
-    async function abc(){
+    // async function abc(){
+    //     axios.get(`https://googleformsclone.herokuapp.com/getAllResponses/${form_id}`)
+    //     .then(response =>{
+    //         // console.log("loaded form : ",response.data)
+    //         if(response.data) {
+    //             setState(response.data)
+    //             // console.log(response.data)
+    //         }
+    //     })
+    // }
+
+    useEffect(()=>{
         axios.get(`https://googleformsclone.herokuapp.com/getAllResponses/${form_id}`)
         .then(response =>{
             // console.log("loaded form : ",response.data)
@@ -25,10 +27,6 @@ const Responses = () => {
                 // console.log(response.data)
             }
         })
-    }
-
-    useEffect(()=>{
-        abc()
     },[form_id])
 
 

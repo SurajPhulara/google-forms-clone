@@ -50,9 +50,9 @@ const FormHeader = () => {
 
       function SimpleDialog(props){
         const { onClose, open } = props;
-        const handleClose = () => {
-            onClose();
-          };
+        // const handleClose = () => {
+        //     onClose();
+        //   };
           function copy(){
             navigator.clipboard.writeText(`http://localhost:3000/form/${form_id}/viewform`)
           }
