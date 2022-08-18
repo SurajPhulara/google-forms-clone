@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import "./ViewForm.css"
 import axios from 'axios'
 import { FormControlLabel } from '@mui/material'
-import { Input } from '@mui/material'
+// import { Input } from '@mui/material'
 import { Button } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 
@@ -13,7 +13,22 @@ const ViewForm = () => {
     const [answer, setAnswer] = useState([])
     const navigate = useNavigate()
 
-    async function show_form() {
+    // async function show_form() {
+    //     axios.get(`https://googleformsclone.herokuapp.com/getform/${form_id}`)
+    //         .then(response => {
+    //             // console.log("loaded form : ", {...response.data.questions_array})
+    //             if (response.data) {
+    //                 setState(response.data)
+    //                 const abc = response.data.questions_array.map((ele, i) => {
+    //                     return " "
+    //                 })
+    //                 const obj = Object.assign({}, abc);
+    //                 setAnswer(obj)
+    //             }
+    //         })
+    // }
+
+    useEffect(() => {
         axios.get(`https://googleformsclone.herokuapp.com/getform/${form_id}`)
             .then(response => {
                 // console.log("loaded form : ", {...response.data.questions_array})
@@ -26,10 +41,6 @@ const ViewForm = () => {
                     setAnswer(obj)
                 }
             })
-    }
-
-    useEffect(() => {
-        show_form()
     }, [form_id])
 
     const save_answer = (i, value) => {
