@@ -188,7 +188,7 @@ const QuestionForm = () => {
                                                                 <Divider orientation='vertical' />
                                                             </span>
                                                             <span className="required">
-                                                                Required<Switch sx={{ marginLeft: '10px' }} onChange={e => dispatch(toggle_required(i))} />
+                                                                Required<Switch sx={{ marginLeft: '10px' }} defaultChecked={this_question.required} onChange={e => dispatch(toggle_required(i))} />
                                                             </span>
                                                             <IconButton sx={{ margin: '3px' }}>
                                                                 <MoreVertIcon />
