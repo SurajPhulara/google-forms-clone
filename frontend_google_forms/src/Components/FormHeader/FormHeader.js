@@ -62,7 +62,7 @@ const FormHeader = () => {
               <List sx={{ pt: 0 }}>
                 {/* {emails.map((email) => ( */}
                   <ListItem button onClick={() =>(console.log("pp"))}>
-                    <ListItemAvatar>
+                    <ListItemAvatar sx={{width:'fit-content'}}>
                         {`https://googleformsclone.netlify.app/form/${form_id}/viewform`}
                     </ListItemAvatar>
                     <ListItemText />
