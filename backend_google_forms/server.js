@@ -49,7 +49,19 @@ app.get("/getform/:form_id", (req, res) => {
     Form.findOne({ form_id: `${req.params.form_id}` }, (err, docs) => {
         if (err) console.log("error finding")
         else {
-            res.send(docs)
+            if(docs)
+            {
+                res.send(docs)
+            }
+            else{
+                const docs = {
+                    form_title: 'you forgot',
+                    form_desc: '',
+                    quizQuestion: true,
+                    questions_array: []
+                  }
+                res.send(docs)
+            }
             // console.log("retrived data : ",docs)
         }
     })
