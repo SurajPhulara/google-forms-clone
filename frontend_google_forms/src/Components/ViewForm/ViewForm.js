@@ -29,7 +29,7 @@ const ViewForm = () => {
     // }
 
     useEffect(() => {
-        axios.get(`https://googleformsclone.herokuapp.com/getform/${form_id}`)
+        axios.get(`https://googleformsclone.herokuapp.com/getfinalform/${form_id}`)
             .then(response => {
                 // console.log("loaded form : ", {...response.data.questions_array})
                 if (response.data) {
@@ -76,7 +76,7 @@ const ViewForm = () => {
                 <div className='blankForm'>
                     <div className="viewform__header">
                         {/* <input type="text" className="form__header_title" value={state?.form_title} placeholder='Form title' /> */}
-                        <div className="form__header_title" style={{ textTransform: 'none' }}> {state ? (state.form_title) : (<div>looks like the form doesn't exist or the admin didn't saved the form</div>)} </div>
+                        <div className="form__header_title" style={{ textTransform: 'none' }}> {state?.form_title} </div>
                         <div className="form__header_desc" style={{ marginTop: '10px' }}>{state?.form_desc} </div>
                         {/* <input type="text" className="form__header_desc" defaultValue={state?.form_desc} placeholder='Form description' /> */}
                     </div>
