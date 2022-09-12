@@ -65,7 +65,10 @@ app.get("/getfinalform/:form_id", (req, res) => {
             }
             else{
                 const docs = {
-                    form_title: "looks like the form doesn't exist or the admin didn't saved the form"
+                    form_title: "looks like the form doesn't exist or the admin didn't saved the form",
+                    form_desc: '',
+                    quizQuestion: true,
+                    questions_array: []
                   }
                 res.send(docs)
             }
