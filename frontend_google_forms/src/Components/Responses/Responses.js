@@ -8,7 +8,7 @@ const Responses = () => {
     const [state, setState] = useState({responses:[]});
 
     // async function abc(){
-    //     axios.get(`https://googleformsclone.herokuapp.com/getAllResponses/${form_id}`)
+    //     axios.get(`https://google-forms-clone.onrender.com/getAllResponses/${form_id}`)
     //     .then(response =>{
     //         // console.log("loaded form : ",response.data)
     //         if(response.data) {
@@ -19,7 +19,7 @@ const Responses = () => {
     // }
 
     useEffect(()=>{
-        axios.get(`https://googleformsclone.herokuapp.com/getAllResponses/${form_id}`)
+        axios.get(`https://google-forms-clone.onrender.com/getAllResponses/${form_id}`)
         .then(response =>{
             // console.log("loaded form : ",response.data)
             if(response.data) {
