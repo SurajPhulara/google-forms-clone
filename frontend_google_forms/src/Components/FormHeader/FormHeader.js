@@ -10,7 +10,7 @@ import { Avatar } from '@mui/material';
 import { Button } from '@mui/material';
 import "./FormHeader.css"
 import { useSelector, useDispatch } from 'react-redux'
-import {change_form_title } from '../../State/formSlice';
+import {change_form_title, save_form } from '../../State/formSlice';
 // import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { Tooltip } from '@mui/material';
@@ -40,6 +40,7 @@ const FormHeader = () => {
     const [open,setOpen] = useState(false);
 
     const handleClickOpen = () => {
+      dispatch(save_form(form_id))
         setOpen(true)
     }
 
