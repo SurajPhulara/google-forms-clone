@@ -40,7 +40,7 @@ const QuestionForm = () => {
     },[form_id, dispatch])
 
     // async function abc(){
-    //     axios.get(`https://google-forms-clone.onrender.com/getform/${form_id}`)
+    //     axios.get(`https://googleformsclone-suraj66171.b4a.run/getform/${form_id}`)
     //     .then(response =>{
     //         // console.log("loaded form : ",response.data)
     //         if(response.data) {
@@ -50,7 +50,7 @@ const QuestionForm = () => {
     // }
 
     useEffect(()=>{
-        axios.get(`https://google-forms-clone.onrender.com/getform/${form_id}`)
+        axios.get(`https://googleformsclone-suraj66171.b4a.run/getform/${form_id}`)
         .then(response =>{
             // console.log("loaded form : ",response.data)
             if(response.data) {

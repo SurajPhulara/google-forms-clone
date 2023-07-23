@@ -16,7 +16,7 @@ const MainBody = () => {
   const [state, setState] = useState()
 
   useEffect(function load_form_data() {
-    axios.get("https://google-forms-clone.onrender.com/getallforms")
+    axios.get("https://googleformsclone-suraj66171.b4a.run/getallforms")
       .then(response => {
         setState(response.data)
       })

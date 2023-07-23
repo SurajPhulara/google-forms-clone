@@ -41,11 +41,11 @@ export const formSlice = createSlice({
     },
     save_form: (state, action) => {
       // console.log("save is called")
-      axios.post(`https://google-forms-clone.onrender.com/saveform/${action.payload}`, { ...state })
+      axios.post(`https://googleformsclone-suraj66171.b4a.run/saveform/${action.payload}`, { ...state })
     },
     save_form2: (state, action) => {
       // console.log("save 2 is called")
-      axios.post(`https://google-forms-clone.onrender.com/saveform/${action.payload}`, { ...initialState })
+      axios.post(`https://googleformsclone-suraj66171.b4a.run/saveform/${action.payload}`, { ...initialState })
     },
     change_form_title: (state, action) => {
       state.form_title = action.payload;

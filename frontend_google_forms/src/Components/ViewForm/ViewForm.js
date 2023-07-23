@@ -14,7 +14,7 @@ const ViewForm = () => {
     const navigate = useNavigate()
 
     // async function show_form() {
-    //     axios.get(`https://google-forms-clone.onrender.com/getform/${form_id}`)
+    //     axios.get(`https://googleformsclone-suraj66171.b4a.run/getform/${form_id}`)
     //         .then(response => {
     //             // console.log("loaded form : ", {...response.data.questions_array})
     //             if (response.data) {
@@ -29,7 +29,7 @@ const ViewForm = () => {
     // }
 
     useEffect(() => {
-        axios.get(`https://google-forms-clone.onrender.com/getfinalform/${form_id}`)
+        axios.get(`https://googleformsclone-suraj66171.b4a.run/getfinalform/${form_id}`)
             .then(response => {
                 // console.log("loaded form : ", {...response.data.questions_array})
                 if (response.data) {
@@ -66,7 +66,7 @@ const ViewForm = () => {
 
     async function submit_form() {
         // console.log("called")
-        axios.post(`https://google-forms-clone.onrender.com/saveresponse/${form_id}`, { ...answer })
+        axios.post(`https://googleformsclone-suraj66171.b4a.run/saveresponse/${form_id}`, { ...answer })
             .then(navigate(`/form/${form_id}/formResponse`, { state: { a: state.form_title } }))
     }
 
