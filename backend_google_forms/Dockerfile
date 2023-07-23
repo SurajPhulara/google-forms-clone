@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Expose the port on which your Node.js app is listening
-# EXPOSE 9000
+EXPOSE 9000
 
 # Start the Node.js app
 CMD ["npm", "start"]
