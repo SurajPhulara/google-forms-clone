@@ -40,7 +40,7 @@ const QuestionForm = () => {
     },[form_id, dispatch])
 
     // async function abc(){
-    //     axios.get(`https://googleformsclone-suraj66171.b4a.run/getform/${form_id}`)
+    //     axios.get(`https://nice-pleat-crow.cyclic.app/getform/${form_id}`)
     //     .then(response =>{
     //         // console.log("loaded form : ",response.data)
     //         if(response.data) {
@@ -50,7 +50,7 @@ const QuestionForm = () => {
     // }
 
     useEffect(()=>{
-        axios.get(`https://googleformsclone-suraj66171.b4a.run/getform/${form_id}`)
+        axios.get(`https://nice-pleat-crow.cyclic.app/getform/${form_id}`)
         .then(response =>{
             // console.log("loaded form : ",response.data)
             if(response.data) {
