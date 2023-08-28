@@ -26,7 +26,7 @@ app.use((req, res, next) => {
 // DB config
 const database_url = process.env.DATABASE
 mongoose.connect(database_url, { useUnifiedTopology: true })
-    .then(() => console.log("connected to database"))
+    .then(() => app.listen(PORT, () => console.log("connected")))
     .catch((e) => console.log("error occured when connecting to database "))
 
 // abcd.save()
@@ -120,20 +120,6 @@ app.post("/saveresponse/:form_id", (req, res) => {
         }
     })
 
-
-    // console.log("pppppppppp", req.body)
-    // const received_response = new Response({
-    //     form_id: `${req.params.form_id}`,
-    //     responses : [
-    //         {...req.body},
-    //     ]
-    // })
-    // console.log(received_response)
-    // received_response.save()
-    //     .catch(err => {
-    //         console.error(err)
-    //     })
 })
 
 // listening
-app.listen(PORT, () => console.log("connected"))
